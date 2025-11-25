@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ultra Responsive Bootstrap Blog</title>
+
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    
+    .navbar-custom {
+      background: linear-gradient(90deg, #4f46e5, #9333ea);
+    }
+
+
+    .hero {
+      background: url("https://images.unsplash.com/photo-1517832606294-2f2f1e735b9c?auto=format&fit=crop&w=1350&q=80")
+        center/cover no-repeat;
+      padding: 120px 20px;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 5;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 800;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      opacity: 0.9;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    
+    .card-custom {
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+    }
+
+    .card-custom img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-body p {
+      flex: 1;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+   
+    @media (max-width: 420px) {
+      .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+   
+    footer {
+      background: linear-gradient(90deg, #4f46e5, #9333ea);
+      color: white;
+      margin-top: 40px;
+      padding: 30px 10px;
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-icon {
+      font-size: 1.7rem;
+      transition: 0.2s ease;
+    }
+
+    .social-icon:hover {
+      transform: translateY(-4px) scale(1.1);
+      color: #ffd700;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+ 
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#">MyModernBlog</a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-3 text-center">
+          <li class="nav-item"><a class="nav-link active fw-semibold" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#">Posts</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ 
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to the Modern Blog</h1>
+      <p class="mt-3">Beautiful design. Fully responsive. Built with Bootstrap & love.</p>
+      <a href="#" class="btn btn-lg btn-warning mt-4 px-4 rounded-pill fw-bold shadow">
+        Explore Posts
+      </a>
+    </div>
+  </section>
+
+ 
+  <div class="container py-5">
+
+    <h2 class="text-center fw-bold mb-5" style="font-size: 2rem;">
+      Latest Articles
+    </h2>
+
+    <div class="row g-4">
+
+      
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card card-custom">
+          <img src="https://picsum.photos/600/350?random=21" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Creative Thinking Tips</h5>
+            <p class="text-secondary">
+              Boost your creativity with proven daily mental exercises.
+            </p>
+            <a href="#" class="btn btn-primary mt-auto">Read More</a>
+          </div>
+        </div>
+      </div>
+
+ 
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card card-custom">
+          <img src="https://picsum.photos/600/350?random=22" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Best Travel Spots 2025</h5>
+            <p class="text-secondary">
+              Explore the top destinations selected by travel experts.
+            </p>
+            <a href="#" class="btn btn-primary mt-auto">Read More</a>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card card-custom">
+          <img src="https://picsum.photos/600/350?random=23" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Frontend Design Guide</h5>
+            <p class="text-secondary">
+              Learn how to craft visually stunning interfaces.
+            </p>
+            <a href="#" class="btn btn-primary mt-auto">Read More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <footer class="text-center">
+    <h5 class="fw-bold mb-3">Follow Us</h5>
+
+    <div class="footer-icons mb-3">
+      <a href="#" class="text-white social-icon"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white social-icon"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-white social-icon"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-white social-icon"><i class="bi bi-youtube"></i></a>
+    </div>
+
+    <p class="m-0 py-1">© 2025 Modern Blog. All rights reserved.</p>
+  </footer>
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
